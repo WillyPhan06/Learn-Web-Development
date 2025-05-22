@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Facebook-like Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phan Tuấn Bảo - Developer Profile</title>
   <style>
+    /* BASIC STYLES */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,7 +15,7 @@
     .cover {
       width: 100%;
       height: 300px;
-      background-image: url('https://img.freepik.com/free-photo/anime-night-sky-illustration_23-2151684328.jpg?semt=ais_hybrid&w=740'); /* Replace with your cover */
+      background-image: url('https://www.pixelstalk.net/wp-content/uploads/images8/Anime-Desktop-Backgrounds.jpg');
       background-size: cover;
       background-position: center;
       position: relative;
@@ -28,7 +29,7 @@
       position: absolute;
       bottom: -75px;
       left: 40px;
-      background-image: url('https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-6/463498515_2884818838343314_1015513992371971026_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=enHvfKgKfPoQ7kNvwFBP1ZA&_nc_oc=Adls1UjuBuhPYdlqpBQGs1L319XBFGyBP1NoQvEanEeLbTaaJ3IFiDCVCzAnTHvoOCs&_nc_zt=23&_nc_ht=scontent.fsgn2-10.fna&_nc_gid=TJAkTCJUUdKfvE-PS6962w&oh=00_AfJdNJIIbVxVfOmEySuOuYIVLaeamNd9zRHOMlhgod_gfw&oe=68346866'); /* Replace with your profile pic */
+      background-image: url('https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-6/463498515_2884818838343314_1015513992371971026_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=enHvfKgKfPoQ7kNvwFBP1ZA&_nc_oc=Adls1UjuBuhPYdlqpBQGs1L319XBFGyBP1NoQvEanEeLbTaaJ3IFiDCVCzAnTHvoOCs&_nc_zt=23&_nc_ht=scontent.fsgn2-10.fna&_nc_gid=TJAkTCJUUdKfvE-PS6962w&oh=00_AfJdNJIIbVxVfOmEySuOuYIVLaeamNd9zRHOMlhgod_gfw&oe=68346866');
       background-size: cover;
       background-position: center;
     }
@@ -49,57 +50,199 @@
       color: #606770;
     }
 
-    .about {
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
       padding: 20px 40px;
+    }
+
+    .column {
+      flex: 1 1 300px;
       background-color: white;
-      margin-top: 10px;
+      padding: 20px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    .about h2 {
+    .column h2 {
       font-size: 20px;
       margin-bottom: 10px;
     }
 
-    .post {
-      padding: 20px 40px;
-      background-color: white;
-      margin-top: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    .social-links a, .edu-entry a {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #1877f2;
+      font-weight: bold;
     }
 
-    .post h3 {
-      margin: 0 0 10px;
+    .social-links img, .edu-entry img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
     }
 
-    .post p {
-      margin: 0;
+    .skills, .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
+    .skill-card, .tool-card {
+      width: 100px;
+      text-align: center;
+    }
+
+    .skill-card img, .tool-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .proficiency-bar {
+      height: 8px;
+      background-color: #ddd;
+      border-radius: 4px;
+      margin-top: 5px;
+      overflow: hidden;
+    }
+
+    .proficiency-fill {
+      height: 100%;
+      background-color: #1877f2;
+    }
+
+    .skill-card a {
+      text-decoration: none;
+      color: inherit;
+    }
   </style>
 </head>
 <body>
 
+  <!-- ========= HEADER SECTION ========= -->
   <div class="cover">
     <div class="profile-pic"></div>
   </div>
 
   <div class="profile-info">
-    <h1>Phan Tuan Bao</h1>
-    <p>Hello there! You can call me Willy.</p>
+    <h1>Phan Tuấn Bảo (Willy)</h1>
+    <p>Full-stack Developer / Software Engineer / Software Architect / DevSecOps Lead</p>
   </div>
 
-  <div class="about">
-    <h2>About</h2>
-    <p>🎓 Education: University of Greenwich</p>
-    <p>🌍 Location: Vietnam</p>
-    <p>💼 Job: Full-stack Developer/Software Architect</p>
-    <p>🧠 Interests: Coding, Gaming, Music</p>
-  </div>
+  <!-- ========= MAIN SECTION ========= -->
+  <div class="main-content">
 
-  <div class="post">
-    <h3>Recent Post</h3>
-    <p>Just finished building my profile page using HTML and CSS! 😎</p>
+    <!-- ========= COLUMN 1: SOCIAL + EDUCATION ========= -->
+    <div class="column">
+      <h2>Connect With Me</h2>
+      <div class="social-links">
+        <!-- Replace # with your actual links -->
+        <a href="https://github.com/WillyPhan06" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> GitHub
+        </a><br>
+        <a href="https://www.linkedin.com/in/b%E1%BA%A3o-phan-tu%E1%BA%A5n-922bb6346/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"> LinkedIn
+        </a><br>
+        <a href="https://www.hackerrank.com/profile/resuviketer4" target="_blank">
+          <img src="https://cdn.worldvectorlogo.com/logos/hackerrank.svg" alt="HackerRank"> HackerRank
+        </a><br>
+        <a href="https://leetcode.com/u/WillyPhan06/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode"> LeetCode
+        </a>
+      </div>
+
+      <h2>Education</h2>
+      <div class="edu-entry">
+        <a href="https://www.facebook.com/groups/1482072005438548" target="_blank">
+          <img src="https://www.unialliance.ac.uk/wp-content/uploads/2023/08/Greenwich-LOGO_2022-N-01.png" alt="Greenwich"> University of Greenwich
+        </a><br>
+        <a href="https://www.facebook.com/HelloGIT" target="_blank">
+          <img src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/453657705_839522268280288_7978887397114289397_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=v5bs5Rjo8VUQ7kNvwFXOi41&_nc_oc=Adk4P05onS6Y-UhbTQZzH-b0MD2cS5r4JmP1rHt7ZQFYXmKUNhTdwasqL8vTpda-3iI&_nc_zt=23&_nc_ht=scontent.fsgn2-11.fna&_nc_gid=7aRJnbg_LNjKZt6pQ9UF_g&oh=00_AfLxYmuHuFe-YjnjLH9ts0bJ6R88B5zMWLGzQls3graZ-g&oe=68348647" alt="HelloGIT"> HelloGIT Club
+        </a>
+      </div>
+    </div>
+
+    <!-- ========= COLUMN 2: SKILLS ========= -->
+    <div class="column">
+      <h2>Languages & Skills</h2>
+      <div class="skills">
+
+        <!-- === Each Skill Card: Replace link with your project gallery or image === -->
+        <div class="skill-card">
+          <a href="https://www.hackerrank.com/domains/algorithms?filters%5Bstatus%5D%5B%5D=solved&badge_type=problem-solving" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python">
+            <div>Python</div>
+            <div class="proficiency-bar"><div class="proficiency-fill" style="width: 85%;"></div></div>
+          </a>
+        </div>
+
+        <div class="skill-card">
+          <a href="https://www.programiz.com/online-compiler/73a4QMgTIJFDk" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++">
+            <div>C++</div>
+            <div class="proficiency-bar"><div class="proficiency-fill" style="width: 45%;"></div></div>
+          </a>
+        </div>
+
+        <div class="skill-card">
+          <a href="https://www.programiz.com/online-compiler/2xPAFKiW5rcoD" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java">
+            <div>Java</div>
+            <div class="proficiency-bar"><div class="proficiency-fill" style="width: 35%;"></div></div>
+          </a>
+        </div>
+
+        <div class="skill-card">
+          <a href="https://github.com/code50/186983170/tree/main" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png" alt="C">
+            <div>C</div>
+            <div class="proficiency-bar"><div class="proficiency-fill" style="width: 40%;"></div></div>
+          </a>
+        </div>
+
+        <div class="skill-card">
+          <a href="https://github.com/WillyPhan06/Learn-Web-Development/blob/main/personal_profile.html" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML">
+            <div>HTML</div>
+            <div class="proficiency-bar"><div class="proficiency-fill" style="width: 20%;"></div></div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ========= COLUMN 3: TOOLS ========= -->
+    <div class="column">
+      <h2>Tools I Use</h2>
+      <div class="tools">
+
+        <!-- You can replace these images/labels with your own tools -->
+        <div class="tool-card">
+          <img src="https://code.visualstudio.com/assets/favicon.ico" alt="VS Code">
+          <div>VS Code</div>
+        </div>
+
+        <div class="tool-card">
+          <img src="https://resources.jetbrains.com/storage/products/pycharm/img/meta/pycharm_logo_300x300.png" alt="PyCharm">
+          <div>PyCharm</div>
+        </div>
+
+        <div class="tool-card">
+          <img src="https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png" alt="IntelliJ">
+          <div>IntelliJ</div>
+        </div>
+
+        <div class="tool-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2x2uHIpTqlqNR47njOeXadt-KvYt8PxH9Kg&s" alt="Notion">
+          <div>Notion</div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 
 </body>
